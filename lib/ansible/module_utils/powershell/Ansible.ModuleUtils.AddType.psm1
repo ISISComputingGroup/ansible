@@ -295,7 +295,7 @@ Function Add-CSharpType {
         else {
             $temp_path = [System.IO.Path]::GetTempPath()
             $include_debug = $IncludeDebugInfo.IsPresent
-            $tmpdir_clean_is_error = $true
+            $tmpdir_clean_is_error = $false
         }
         $temp_path = Join-Path -Path $temp_path -ChildPath ([Guid]::NewGuid().Guid)
 
